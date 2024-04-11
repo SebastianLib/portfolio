@@ -10,13 +10,13 @@ const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
 
   return (
-    <nav className="fixed top-4 w-full flex justify-center">
+    <nav className="fixed z-30 top-4 w-full flex justify-center">
       <motion.div
     initial={{ opacity: 0, scale: 0.5, y:-200 }}
     animate={{ opacity: 1, scale: 1, y:0 }}
     transition={{ duration: 1 }}
         className="flex justify-between items-center max-w-7xl w-full py-4 md:px-8 mx-4 
-      rounded-full border-2 border-transparent md:border-purple-600"
+      rounded-full border-2 border-transparent md:border-purple-600 bg-black"
       >
         <Link href="/">
           <p className="text-3xl font-semibold">
