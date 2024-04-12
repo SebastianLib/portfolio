@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { links } from "../utils/links";
+import { links } from "../../utils/links";
 import MobileNavbar from "./MobileNavbar";
 import { AnimatePresence, motion } from "framer-motion";
 

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { links } from "../utils/links";
+import { links } from "../../utils/links";
 import { motion } from "framer-motion";
-import { menuSlide, slide } from "../utils/anim";
+import { menuSlide, slide } from "../../utils/anim";
 
 interface MobileNavbarProps {
   onClick: () => void;
