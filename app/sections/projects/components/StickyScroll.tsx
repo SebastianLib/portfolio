@@ -42,7 +42,7 @@ const StickyScroll = () => {
               key={index}
               setCurrentIndex={setCurrentIndex}
               index={index}
-              features={features[currentIndex]}
+              features={features[index]}
             />
           ))}
         </div>
