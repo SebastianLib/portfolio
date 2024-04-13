@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 interface CardProps {
-  currentImage: string;
+  currentImage: string | StaticImageData;
   link: string;
   github: string
 }
@@ -12,7 +12,7 @@ interface CardProps {
 const Card = ({ currentImage, link, github }: CardProps) => {
   return (
     <motion.div
-      key={currentImage}
+      key={link}
       initial={{ opacity: 0.5 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

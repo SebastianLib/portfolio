@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useInView } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
@@ -10,7 +10,7 @@ interface Features{
   github:string
   title: string;
   description: string;
-  image:string,
+  image:string | StaticImageData,
 }
 
 interface BodyProps {
