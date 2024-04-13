@@ -3,7 +3,7 @@ import Projects from "./sections/projects/Projects";
 
 export default function Home() {
   return (
-    <main className="h-[2000px]">
+    <main className="">
       <Hero/>
       <Projects/>
     </main>

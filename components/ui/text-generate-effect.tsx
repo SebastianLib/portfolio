@@ -13,7 +13,6 @@ export const TextGenerateEffect = ({
   const [scope, animate] = useAnimate();
   
 const isInView = useInView(scope)
-console.log(isInView);
   let wordsArray = words.split(" ");
   useEffect(() => {
     if(isInView){ 
@@ -49,7 +48,7 @@ console.log(isInView);
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className="text-white text-center text-4xl leading-snug tracking-wide">
+        <div className="text-white text-center text-5xl leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>

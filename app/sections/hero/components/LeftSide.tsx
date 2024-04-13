@@ -23,7 +23,7 @@ const LeftSide = () => {
           </h2>
         </div>
         <div className="mt-4 md:mt-20 border-l-[6px] flex flex-col items-center md:items-start border-hidden md:border-solid border-l-neutral-500">
-          <p className="pl-3 text-neutral-500 text-md md:text-xl max-w-sm text-center md:text-left">
+          <p className="pl-3 text-neutral-400 text-md md:text-xl max-w-sm text-center md:text-left">
             Self-taught frontend developer passionate about continuous learning
             and innovative web design.
           </p>
