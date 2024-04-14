@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useInView } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
@@ -10,7 +10,7 @@ interface Features{
   github:string
   title: string;
   description: string;
-  image:string | StaticImageData,
+  image:string,
 }
 
 interface BodyProps {
@@ -57,7 +57,7 @@ const Body = ({ features, index, setCurrentIndex }: BodyProps) => {
       >
         <Link
           href={github}
-          className="flex gap-2 bg-violet-500 rounded-full p-3 items-center  transition-colors duration-500"
+          className="flex gap-2 bg-violet-500 rounded-full text-md p-3 items-center  transition-colors duration-500"
         >
           <span>
             <FaGithub size={30} />
@@ -66,7 +66,7 @@ const Body = ({ features, index, setCurrentIndex }: BodyProps) => {
         </Link>
         <Link
           href={link}
-          className="flex gap-2 bg-violet-500 rounded-full p-3 items-center transition-colors duration-500"
+          className="flex gap-2 bg-violet-500 rounded-full text-md p-3 items-center transition-colors duration-500"
         >
           <span>
             <FaExternalLinkAlt />

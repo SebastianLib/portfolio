@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 interface CardProps {
-  currentImage: string | StaticImageData;
+  currentImage: string ;
   link: string;
   github: string
 }
@@ -16,7 +16,7 @@ const Card = ({ currentImage, link, github }: CardProps) => {
       initial={{ opacity: 0.5 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="h-[60%] w-full rounded-2xl relative overflow-hidden mt-20 "
+      className="h-[60%] w-full rounded-2xl relative overflow-hidden mt-20 shadow-2xl shadow-violet-500/50"
     >
       <Image src={currentImage} className="object-cover" fill alt="card" />
       <div

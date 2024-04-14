@@ -48,9 +48,9 @@ const isInView = useInView(scope)
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className="text-white text-center text-5xl leading-snug tracking-wide">
+        <h2 className="text-white text-center leading-snug tracking-wide text-4xl md:text-5xl">
           {renderWords()}
-        </div>
+        </h2>
       </div>
     </div>
   );

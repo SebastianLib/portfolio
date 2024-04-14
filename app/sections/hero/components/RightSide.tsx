@@ -14,7 +14,7 @@ const RightSide = () => {
         initial={{ opacity: 0, x: 0 }}
         animate={{ opacity: 1, x: -190 }}
         transition={{ duration: 1, delay: 2 }}
-        className="w-[280px] h-[360px] md:w-[400px] md:h-[500px] 2xl:w-[450px] 2xl:h-[600px] z-10 absolute bottom-0 md:bottom-0 left-[50%] 
+        className="w-[280px] h-[360px] md:w-[400px] md:h-[500px] 2xl:w-[450px] 2xl:h-[600px] z-10 absolute -bottom-4 md:bottom-0 left-[50%] 
       translate-x-[-50%] "
       >
         <Image

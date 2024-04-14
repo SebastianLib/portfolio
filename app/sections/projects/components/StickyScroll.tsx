@@ -2,9 +2,6 @@
 import { useState } from "react";
 import Body from "./Body";
 import Card from "./Card";
-import shop from "@/public/shopImg.png"
-import calendar from "@/public/calendarImg.png"
-import portfolio from "@/public/portfolioImg.png"
 
 const features = [
   {
@@ -13,7 +10,7 @@ const features = [
     title: "Shop-nextjs",
     description:
       "In this project, you can create your own products, add them to your shopping cart, and buy them if you are logged in.",
-    image: shop,
+    image: "/shopImg.PNG",
   },
   {
     link: "https://calendar-collaborate.vercel.app/",
@@ -21,7 +18,7 @@ const features = [
     title: "CalendarCollaborate",
     description:
       "With this app, you and your teammates can create tasks for yourselves and your team, then view them on your calendar. You can also create and join teams, follow others, and track daily task progress.",
-    image: calendar,
+    image: "/calendarImg.PNG",
   },
   {
     link: "#",
@@ -29,7 +26,7 @@ const features = [
     title: "Portfolio Website",
     description:
       "On this website, I showcase my best projects and demonstrate all my acquired skills. In the hero section, you can download my CV by clicking the button, and through the contact form, you can easily send me an email.",
-    image: portfolio,
+    image: "/portfolioImg.PNG",
   },
 ];
 
