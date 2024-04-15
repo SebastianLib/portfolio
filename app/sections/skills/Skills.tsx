@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const fadeInAnimationVariants = {
     initial:{
         opacity: 0,
-        y:-100,
+        y:100,
     },
     animate: (index:number)=>({
         opacity: 1,
@@ -21,7 +21,7 @@ const fadeInAnimationVariants = {
 
 const Skills = () => {
   return (
-    <section className="min-h-[1000px]">
+    <section className="mb-32">
       <div className="max-w-7xl mx-auto -mt-24 px-4">
         <TextGenerateEffect
           words={"My Skills"}
