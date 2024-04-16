@@ -1,5 +1,4 @@
 import Image, { StaticImageData } from "next/image";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
@@ -11,11 +10,8 @@ interface CardProps {
 
 const Card = ({ currentImage, link, github }: CardProps) => {
   return (
-    <motion.div
+    <div
       key={link}
-      initial={{ opacity: 0.5 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
       className="h-[60%] w-full rounded-2xl relative overflow-hidden mt-20 shadow-2xl shadow-violet-500/50"
     >
       <Image src={currentImage} className="object-cover" fill alt="card" />
@@ -42,7 +38,7 @@ const Card = ({ currentImage, link, github }: CardProps) => {
           Go there
         </Link>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

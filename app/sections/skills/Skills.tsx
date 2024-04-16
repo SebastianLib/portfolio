@@ -21,15 +21,15 @@ const fadeInAnimationVariants = {
 
 const Skills = () => {
   return (
-    <section className="mb-32">
-      <div className="max-w-7xl mx-auto -mt-24 px-4">
+    <section id="skills" className="pb-32 -mt-32 pt-12 ">
+      <div className="max-w-7xl mx-auto px-4 pt-8">
         <TextGenerateEffect
           words={"My Skills"}
-          className="mt-20 z-10 relative"
+          className="z-10 relative"
         />
 
         <div 
-        className="mt-20 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5
+        className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5
          gap-4 sm:gap-14"
          >
 

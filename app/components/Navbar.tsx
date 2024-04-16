@@ -10,7 +10,7 @@ const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
 
   return (
-    <nav className="fixed z-30 top-0 md:top-4 w-full flex justify-center">
+    <nav className="fixed z-30 top-0 md:top-4 w-full flex justify-center bg-black md:bg-transparent">
       <motion.div
     initial={{ opacity: 0, scale: 0.5, y:-200 }}
     animate={{ opacity: 1, scale: 1, y:0 }}
@@ -18,7 +18,7 @@ const Navbar = () => {
         className="flex justify-between items-center max-w-7xl w-full py-4 md:px-8 mx-4 
       rounded-full border-2 border-transparent md:border-purple-600 bg-black"
       >
-        <Link href="/">
+        <Link href="#home">
           <p className="text-3xl font-semibold">
             Sebastian <span className="text-purple-500">Lib</span>
           </p>
@@ -58,7 +58,7 @@ const Navbar = () => {
           before:h-[2px] before:m-auto before:transition before:relative before:top-[5px]
           ${
             isActive &&
-            "after:rotate-45 after:top-[-3px] before:-rotate-45 before:top-[-1px]"
+            "after:rotate-45 after:top-[-1px] before:-rotate-45 before:top-[1px]"
           }`}
           ></div>
         </div>

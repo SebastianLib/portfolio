@@ -3,9 +3,9 @@ import StickyScroll from "./components/StickyScroll";
 
 const Projects = () => {
   return (
-    <section className="">
-      <div className="max-w-7xl mx-auto">
-        <TextGenerateEffect words={"My Projects"} className="mt-20 z-10 relative" />
+    <section id="projects" className="">
+      <div className="max-w-7xl mx-auto pt-20 ">
+        <TextGenerateEffect words={"My Projects"} className="z-10 relative" />
         <StickyScroll />
       </div>
     </section>

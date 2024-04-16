@@ -1,3 +1,4 @@
+import { ProjectTypes } from "@/utils/projects";
 import clsx from "clsx";
 import { useInView } from "framer-motion";
 import Image from "next/image";
@@ -5,23 +6,15 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
-interface Features{
-  link:string,
-  github:string
-  title: string;
-  description: string;
-  image:string,
-}
-
 interface BodyProps {
-  features: Features;
+  projects: ProjectTypes;
   index: number;
   setCurrentIndex: (index: number) => void;
 }
 
-const Body = ({ features, index, setCurrentIndex }: BodyProps) => {
+const Body = ({ projects, index, setCurrentIndex }: BodyProps) => {
   
-  const {link, github, title, description, image} = features;
+  const {link, github, title, description, image} = projects;
 
   const ref = useRef<HTMLParagraphElement>(null);
   const isInView = useInView(ref, { margin: "-50% 0px -50% 0px" });
