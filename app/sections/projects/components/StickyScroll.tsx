@@ -29,7 +29,12 @@ const StickyScroll = () => {
             github={projects[currentIndex].github}
           /> */}
           {projects.map((project, index) => (
-            <div className={`${currentIndex === index ? "opacity-100" : "opacity-0"} transition-opacity`}>
+            <div
+              key={index}
+              className={`${
+                currentIndex === index ? "opacity-100" : "opacity-0"
+              } transition-opacity`}
+            >
               <Card
                 currentImage={project.image}
                 link={project.link}
