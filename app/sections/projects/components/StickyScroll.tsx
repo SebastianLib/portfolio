@@ -22,12 +22,21 @@ const StickyScroll = () => {
         </div>
       </div>
       <div className="hidden md:flex w-full sticky top-0 h-screen items-center">
-        <div className="w-full rounded-2xl aspect-square">
-          <Card
+        <div className="w-full h-[50%] relative rounded-2xl aspect-square">
+          {/* <Card
             currentImage={projects[currentIndex].image}
             link={projects[currentIndex].link}
             github={projects[currentIndex].github}
-          />
+          /> */}
+          {projects.map((project, index) => (
+            <div className={`${currentIndex === index ? "opacity-100" : "opacity-0"} transition-opacity`}>
+              <Card
+                currentImage={project.image}
+                link={project.link}
+                github={project.github}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>

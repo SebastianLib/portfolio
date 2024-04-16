@@ -21,7 +21,7 @@ const fadeInAnimationVariants = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="pb-32 -mt-32 pt-12 ">
+    <section id="skills" className="pb-12 md:-mt-44 pt-12 ">
       <div className="max-w-7xl mx-auto px-4 pt-8">
         <TextGenerateEffect
           words={"My Skills"}

@@ -12,7 +12,7 @@ const Card = ({ currentImage, link, github }: CardProps) => {
   return (
     <div
       key={link}
-      className="h-[60%] w-full rounded-2xl relative overflow-hidden mt-20 shadow-2xl shadow-violet-500/50"
+      className="w-full rounded-2xl absolute inset-0 overflow-hidden mt-20 shadow-2xl shadow-violet-500/50"
     >
       <Image src={currentImage} className="object-cover" fill alt="card" />
       <div
