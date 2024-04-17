@@ -1,5 +1,5 @@
 "use client"
-import { useEffect } from "react";
+import { useEffect} from "react";
 import Contact from "./sections/contact/Contact";
 import Footer from "./sections/footer/Footer";
 import Hero from "./sections/hero/Hero";
@@ -8,8 +8,8 @@ import Skills from "./sections/skills/Skills";
 import Lenis from '@studio-freight/lenis';
 import ButtonToStart from "./components/ButtonToHome";
 
-
 export default function Home() {
+  
   useEffect(()=>{
     document.querySelectorAll('a[href^="#"]').forEach((el) => {
       el.addEventListener('click', (e) => {

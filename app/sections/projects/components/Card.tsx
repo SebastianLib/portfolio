@@ -16,7 +16,7 @@ const Card = ({ currentImage, link, github }: CardProps) => {
     >
       <Image src={currentImage} className="object-cover" fill alt="card" />
       <div
-        className="absolute inset-0 bg-black/50 flex justify-center items-center
+        className="absolute inset-0 z-40 bg-black/50 flex justify-center items-center
       opacity-0 hover:opacity-100 transition-opacity duration-500 text-2xl gap-8"
       >
         <Link
