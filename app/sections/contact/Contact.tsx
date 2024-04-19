@@ -78,7 +78,7 @@ const Contact = () => {
                   Full name
                 </label>
                 <input
-                  className="p-3 sm:p-4 rounded-2xl bg-violet-300/20 font-bold hover:outline-none"
+                  className="p-3 focus:outline-none focus:ring-2 focus:ring-violet-500  sm:p-4 rounded-2xl bg-violet-300/20 font-bold"
                   type="text"
                   {...register("name")}
                   id="name"
@@ -94,7 +94,7 @@ const Contact = () => {
                   Email
                 </label>
                 <input
-                  className="p-3 sm:p-4rounded-2xl bg-violet-300/20 font-bold hover:outline-none"
+                  className="p-3 focus:outline-none focus:ring-2 focus:ring-violet-500  sm:p-4 rounded-2xl bg-violet-300/20 font-bold"
                   type="text"
                   {...register("email")}
                   id="email"
@@ -110,7 +110,7 @@ const Contact = () => {
                   Message
                 </label>
                 <textarea
-                  className="p-3 sm:p-4 rounded-2xl bg-violet-300/20 font-bold hover:outline-none"
+                  className="p-3 focus:outline-none focus:ring-2 focus:ring-violet-500  sm:p-4 rounded-2xl bg-violet-300/20 font-bold hover:outline-none"
                   {...register("message")}
                   id="message"
                   placeholder="Enter your message..."
