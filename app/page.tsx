@@ -7,6 +7,7 @@ import Projects from "./sections/projects/Projects";
 import Skills from "./sections/skills/Skills";
 import Lenis from '@studio-freight/lenis';
 import ButtonToStart from "./components/ButtonToHome";
+import Journey from "./sections/journey/Journey";
 
 export default function Home() {
   
@@ -37,6 +38,7 @@ export default function Home() {
       <Hero/>
       <Projects/>
       <Skills/>
+      <Journey/>
       <Contact/>
       <Footer/>
       <ButtonToStart/>

@@ -26,7 +26,7 @@ const Navbar = () => {
 
         <ul
           onMouseLeave={() => setHoveredItem(null)}
-          className="hidden md:flex gap-10 text-xl font-medium"
+          className="hidden md:flex gap-5 lg:gap-10 text-xl font-medium"
         >
           {links.map((link, index) => (
             <li
