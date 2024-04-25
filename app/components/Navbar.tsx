@@ -58,7 +58,7 @@ const Navbar = () => {
           before:h-[2px] before:m-auto before:transition before:relative before:top-[5px]
           ${
             isActive &&
-            "after:rotate-45 after:top-[-2px] before:-rotate-45 before:top-[0px]"
+            "after:rotate-45 after:top-[0px] before:-rotate-45 before:top-[2px]"
           }`}
           ></div>
         </div>

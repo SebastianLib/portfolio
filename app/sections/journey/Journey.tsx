@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Card from "./components/Card";
 import { journeyCards } from "@/utils/journeyCards";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 const Journey = () => {
   const targetRef = useRef<HTMLDialogElement | null>(null);
@@ -14,7 +15,7 @@ const Journey = () => {
   return (
     <section id="journey" ref={targetRef} className="relative h-[300vh] bg-black">
       <div className="sticky top-0 h-screen flex flex-col justify-center items-center overflow-hidden">
-        <h2 className="text-center mb-32 text-5xl font-bold">My Journey</h2>
+      <TextGenerateEffect words={"My Journey"} className="z-10 relative mb-32" />
         <motion.div style={{ x }} className="flex gap-12 relative">
           <div className="absolute -top-12 left-0 right-0 h-1 bg-violet-500 
           before:content-[''] before:absolute before:right-[-2px] before:-top-2 before:w-6 before:h-1 

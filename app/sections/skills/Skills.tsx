@@ -3,6 +3,7 @@ import { CardContainer, CardItem, CardBody } from "@/components/ui/3d-card";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { skillsList } from "@/utils/skills";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const fadeInAnimationVariants = {
     initial:{
@@ -21,11 +22,11 @@ const fadeInAnimationVariants = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="pb-12 md:-mt-44 pt-12 ">
-      <div className="max-w-7xl mx-auto px-4 pt-8">
+    <section id="skills" className="pb-12 md:-mt-44 pt-12 relative">
+      <div className="max-w-7xl mx-auto px-4 pt-8 z-20 relative">
         <TextGenerateEffect
           words={"My Skills"}
-          className="z-10 relative"
+          className="z-10 relative mb-20"
         />
 
         <div 
@@ -66,6 +67,9 @@ const Skills = () => {
             })}
         </div>
       </div>
+      {/* <div className="w-[450px] h-[380px] md:w-[950px] md:h-[700px] absolute overflow-visible right-20 -top-48 -z-10">
+        <Image src="/elipse1.svg" fill alt="elipse" />
+      </div> */}
     </section>
   );
 };

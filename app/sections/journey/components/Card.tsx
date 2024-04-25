@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import React from "react";
+
 
 interface CardProps {
   card: {
@@ -10,7 +12,11 @@ interface CardProps {
 
 const Card = ({ card }: CardProps) => {
   return (
-    <div
+    <motion.div
+    initial={{ opacity: 0, x: 200 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.5 }} 
+    viewport={{once:true}}
       key={card.id}
       className="relative border-2 border-violet-500 rounded-2xl min-h-[250px] w-[450px] p-8"
     >
@@ -22,7 +28,7 @@ const Card = ({ card }: CardProps) => {
       >
         <p className="text-xl font-bold">{card.id}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

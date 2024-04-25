@@ -12,7 +12,7 @@ const Footer = () => {
           </p>
         </Link>
 
-        <ul className="flex gap-6 md:gap-12">
+        <ul className="flex gap-4 md:gap-12 flex-wrap justify-center">
             {links.map((link, index)=>(
                 <li key={index} className="text-xl hover:text-violet-500 transition-colors duration-500">
                     <Link href={link.href}>{link.label}</Link>

@@ -56,7 +56,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto pt-20 px-4">
         <TextGenerateEffect
           words={"Contact With Me"}
-          className="z-10 relative"
+          className="z-10 relative mb-20"
         />
         <motion.div
         initial={{ opacity: 0, x: -200 }}
