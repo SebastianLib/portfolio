@@ -31,7 +31,7 @@ const RightSide = () => {
         className="w-[500px] h-[500px] md:w-[700px] md:h-[700px] lg:w-[800px] lg:h-[800px] 2xl:h-[850px] 2xl:w-[850px] absolute -bottom-44 md:-bottom-72 left-[50%] 
       translate-x-[-50%] "
       >
-        <Image src="/blob.svg" alt="person" fill className="absolute" />
+        <Image src="/blob.svg" alt="blob" fill className="absolute" />
       </motion.div>
     </div>
   );

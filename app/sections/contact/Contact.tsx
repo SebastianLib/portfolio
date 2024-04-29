@@ -10,9 +10,9 @@ import { BackgroundGradient } from "@/components/ui/background-gradient";
 import {motion} from "framer-motion"
 
 const schema = z.object({
-  name: z.string().min(1),
+  name: z.string(),
   email: z.string().email(),
-  message: z.string().min(8),
+  message: z.string(),
 });
 
 type FormFields = z.infer<typeof schema>;
@@ -54,15 +54,15 @@ const Contact = () => {
   return (
     <section id="contact">
       <div className="max-w-7xl mx-auto pt-20 px-4">
-        <TextGenerateEffect
+        {/* <TextGenerateEffect
           words={"Contact With Me"}
           className="z-10 relative mb-20"
-        />
+        /> */}
         <motion.div
-        initial={{ opacity: 0, x: -200 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 0.5 }} 
-        viewport={{once:true}}
+        // initial={{ opacity: 0, x: -200 }}
+        // whileInView={{ opacity: 1, x: 0 }}
+        // transition={{ duration: 1, delay: 0.5 }} 
+        // viewport={{once:true}}
         className="mt-10 mx-auto sm:max-w-4xl">
           <BackgroundGradient className="sm:max-w-4xl bg-black rounded-3xl px-2 md:px-10 py-16">
             <h3 className="text-4xl font-bold text-center mb-10">
@@ -75,7 +75,7 @@ const Contact = () => {
             >
               <div className="flex flex-col gap-3">
                 <label className="font-bold text-lg sm:text-xl" htmlFor="name">
-                  Full name
+                  Full Name
                 </label>
                 <input
                   className="p-3 focus:outline-none focus:ring-2 focus:ring-violet-500  sm:p-4 rounded-2xl bg-violet-300/20 font-bold"

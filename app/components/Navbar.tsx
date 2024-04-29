@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { links } from "../../utils/links";
 import MobileNavbar from "./MobileNavbar";
 import { AnimatePresence, motion } from "framer-motion";
+import NavLink from "./NavLink";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -12,16 +13,16 @@ const Navbar = () => {
   return (
     <nav className="fixed z-30 top-0 md:top-4 w-full flex justify-center bg-black md:bg-transparent">
       <motion.div
-    initial={{ opacity: 0, scale: 0.5, y:-200 }}
-    animate={{ opacity: 1, scale: 1, y:0 }}
-    transition={{ duration: 1 }}
+        initial={{ opacity: 0, scale: 0.5, y: -200 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 1 }}
         className="flex justify-between items-center max-w-7xl w-full py-4 md:px-8 mx-4 
       rounded-full border-2 border-transparent md:border-purple-600 bg-black"
       >
         <Link href="#home">
-          <p className="text-3xl font-semibold">
+          <h2 className="text-3xl font-semibold">
             Sebastian <span className="text-purple-500">Lib</span>
-          </p>
+          </h2>
         </Link>
 
         <ul
@@ -29,19 +30,13 @@ const Navbar = () => {
           className="hidden md:flex gap-5 lg:gap-10 text-xl font-medium"
         >
           {links.map((link, index) => (
-            <li
-              className="relative"
-              onMouseEnter={() => setHoveredItem(index)}
-              key={link.label}
-            >
-              <Link href={link.href}>{link.label}</Link>
-              {hoveredItem === index && (
-                <motion.div
-                  layoutId="purple-dot"
-                  className="absolute w-3 h-3 left-[50%] translate-x-[-50%] rounded-full bg-purple-600"
-                />
-              )}
-            </li>
+            <NavLink
+              key={index}
+              index={index}
+              link={link}
+              hoveredItem={hoveredItem}
+              onHover={() => setHoveredItem(index)}
+            />
           ))}
         </ul>
 
