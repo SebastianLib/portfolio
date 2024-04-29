@@ -54,15 +54,15 @@ const Contact = () => {
   return (
     <section id="contact">
       <div className="max-w-7xl mx-auto pt-20 px-4">
-        {/* <TextGenerateEffect
+        <TextGenerateEffect
           words={"Contact With Me"}
           className="z-10 relative mb-20"
-        /> */}
+        />
         <motion.div
-        // initial={{ opacity: 0, x: -200 }}
-        // whileInView={{ opacity: 1, x: 0 }}
-        // transition={{ duration: 1, delay: 0.5 }} 
-        // viewport={{once:true}}
+        initial={{ opacity: 0, x: -200 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.5 }} 
+        viewport={{once:true}}
         className="mt-10 mx-auto sm:max-w-4xl">
           <BackgroundGradient className="sm:max-w-4xl bg-black rounded-3xl px-2 md:px-10 py-16">
             <h3 className="text-4xl font-bold text-center mb-10">
