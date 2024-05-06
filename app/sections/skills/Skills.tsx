@@ -1,7 +1,7 @@
 "use client"
 import { CardContainer, CardItem, CardBody } from "@/components/ui/3d-card";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { skillsList } from "@/utils/skills";
+import { skillsList } from "@/utils/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -22,7 +22,7 @@ const fadeInAnimationVariants = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="pb-12 md:-mt-44 pt-12 relative">
+    <section id="skills" className="pb-12 lg:-mt-44 pt-12 relative">
       <div className="max-w-7xl mx-auto px-4 pt-8 z-20 relative">
         <TextGenerateEffect
           words={"My Skills"}

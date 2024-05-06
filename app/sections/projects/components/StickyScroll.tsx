@@ -2,15 +2,15 @@
 import { useState } from "react";
 import Body from "./Body";
 import Card from "./Card";
-import { projects } from "@/utils/projects";
+import { projects } from "@/utils/constants";
+
 
 const StickyScroll = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   return (
-    <div className="-mt-8 md:-mt-48 z-0 px-2 flex w-full md:gap-4 xl:gap-20 items-start">
-      <div className="w-full md:py-[40vh]">
-        <div>
+    <div className="lg:-mt-48 z-0 px-4 flex w-full lg:gap-4 xl:gap-20 items-start">
+      <div className="w-full lg:py-[40vh]">
           {projects.map((feature, index) => (
             <Body
               key={index}
@@ -19,10 +19,9 @@ const StickyScroll = () => {
               projects={projects[index]}
             />
           ))}
-        </div>
       </div>
-      <div className="hidden md:flex w-full sticky top-0 h-screen items-center">
-        <div className="w-full h-[50%] relative rounded-2xl aspect-square">
+      <div className="hidden lg:flex w-full sticky top-0 h-screen items-center">
+        <div className="w-full max-h-[50%] relative rounded-2xl aspect-square">
 
           {projects.map((project, index) => (
             <div

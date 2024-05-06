@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { links } from "../../utils/links";
 import { motion } from "framer-motion";
 import { menuSlide, slide } from "../../utils/anim";
+import { links } from "@/utils/constants";
 
 interface MobileNavbarProps {
   onClick: () => void;
@@ -18,7 +18,7 @@ const MobileNavbar = ({ onClick }: MobileNavbarProps) => {
     top-0 h-full max-w-sm w-full"
     >
       <div className="p-20 flex justify-between">
-        <div className="flex flex-col gap-12 mt-12 max-w-44 w-full">
+        <div className="flex flex-col gap-12 mt-12 max-w-56 w-full">
           <p className="text-gray-300 border-b w-full">Navigation</p>
           <ul className="flex flex-col gap-6 text-3xl">
             {links.map((link, index) => (

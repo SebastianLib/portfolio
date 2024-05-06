@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { links } from "../../utils/links";
 import MobileNavbar from "./MobileNavbar";
 import { AnimatePresence, motion } from "framer-motion";
 import NavLink from "./NavLink";
+import { links } from "@/utils/constants";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -53,7 +53,7 @@ const Navbar = () => {
           before:h-[2px] before:m-auto before:transition before:relative before:top-[5px]
           ${
             isActive &&
-            "after:rotate-45 after:top-[0px] before:-rotate-45 before:top-[2px]"
+            "after:rotate-45 after:top-[-1px] before:-rotate-45 before:top-[1px]"
           }`}
           ></div>
         </div>

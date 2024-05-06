@@ -2,8 +2,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Card from "./components/Card";
-import { journeyCards } from "@/utils/journeyCards";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { journeyCards } from "@/utils/constants";
 
 const Journey = () => {
   const targetRef = useRef<HTMLDialogElement | null>(null);

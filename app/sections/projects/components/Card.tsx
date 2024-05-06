@@ -1,11 +1,11 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 interface CardProps {
-  currentImage: string ;
+  currentImage: string;
   link: string;
-  github: string
+  github: string;
 }
 
 const Card = ({ currentImage, link, github }: CardProps) => {
@@ -14,7 +14,13 @@ const Card = ({ currentImage, link, github }: CardProps) => {
       key={link}
       className="w-full rounded-2xl absolute inset-0 overflow-hidden mt-20 shadow-2xl shadow-violet-500/50"
     >
-      <Image src={currentImage} className="object-cover" fill alt="card" />
+      <Image
+        src={currentImage}
+        sizes="w-full"
+        className="object-cover"
+        fill
+        alt="card"
+      />
       <div
         className="absolute inset-0 z-40 bg-black/50 flex justify-center items-center
       opacity-0 hover:opacity-100 transition-opacity duration-500 text-2xl gap-8"

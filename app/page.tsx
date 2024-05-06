@@ -1,47 +1,49 @@
-"use client"
-import { useEffect} from "react";
+"use client";
+import { useEffect } from "react";
 import Contact from "./sections/contact/Contact";
 import Footer from "./sections/footer/Footer";
 import Hero from "./sections/hero/Hero";
 import Projects from "./sections/projects/Projects";
 import Skills from "./sections/skills/Skills";
-import Lenis from '@studio-freight/lenis';
+import Lenis from "@studio-freight/lenis";
 import ButtonToStart from "./components/ButtonToHome";
 import Journey from "./sections/journey/Journey";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
-  
-  useEffect(()=>{
+  useEffect(() => {
     document.querySelectorAll('a[href^="#"]').forEach((el) => {
-      el.addEventListener('click', (e) => {
-        
-        e.preventDefault()
-        const id = el.getAttribute('href')?.slice(1)
-        if (!id) return
-        const target = document.getElementById(id)
-        if (target) {      
-          target.scrollIntoView({ behavior: 'smooth' })
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+        const id = el.getAttribute("href")?.slice(1);
+        if (!id) return;
+        const target = document.getElementById(id);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
         }
-      })
-    })
-    const lenis = new Lenis()
-    
-    function raf(time:any) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
+      });
+    });
+    const lenis = new Lenis();
+
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     }
-    
-    requestAnimationFrame(raf)
-  },[])
+
+    requestAnimationFrame(raf);
+  }, []);
   return (
-    <main>
-      <Hero/>
-      <Projects/>
-      <Skills/>
-      <Journey/>
-      <Contact/>
-      <Footer/>
-      <ButtonToStart/>
-    </main>
+    <>
+    <Navbar/>
+      <main>
+        <Hero />
+        <Projects />
+        <Skills />
+        <Journey />
+        <Contact />
+      </main>
+      <Footer />
+      <ButtonToStart />
+    </>
   );
 }
