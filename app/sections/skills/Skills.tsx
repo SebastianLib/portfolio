@@ -50,7 +50,7 @@ const Skills = () => {
                   >
                     <CardBody
                       className="bg-black relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] 
-                      flex flex-col justify-center items-center gap-4 rounded-2xl 
+                      flex flex-col justify-center items-center gap-4 rounded-3xl overflow-hidden
                         border-violet-500 border-2 aspect-square"
                     >
                       <CardItem
