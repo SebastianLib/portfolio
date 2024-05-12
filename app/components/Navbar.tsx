@@ -50,11 +50,7 @@ const Navbar = () => {
           <div
             className={`w-full after:content-[''] after:block after:w-[40%] after:bg-white
           after:h-[2px] after:m-auto after:relative after:top-[-5px] after:transition before:content-[''] before:block before:w-[40%] before:bg-white
-          before:h-[2px] before:m-auto before:transition before:relative before:top-[5px]
-          ${
-            isActive &&
-            "after:rotate-45 after:top-[-1px] before:-rotate-45 before:top-[1px]"
-          }`}
+          before:h-[2px] before:m-auto before:transition before:relative before:top-[5px]`}
           ></div>
         </div>
         <AnimatePresence mode="wait">

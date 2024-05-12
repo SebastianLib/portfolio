@@ -46,7 +46,7 @@ const Skills = () => {
                     custom={index}
                     >
                     <CardContainer
-                    className="relative w-full group h-full shadow-2xl shadow-violet-500/50"
+                    className="relative w-full group h-full shadow-2xl shadow-violet-500/50 overflow-hidden"
                   >
                     <CardBody
                       className="bg-black relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] 
