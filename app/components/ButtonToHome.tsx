@@ -37,7 +37,7 @@ const ButtonToStart = () => {
             animate={{ opacity: 1 }}
             transition={{ ease: "easeOut", duration: 0.5}}
             className="fixed flex hover:scale-105 transition items-center justify-center right-3 
-            bottom-24 md:bottom-10 md:right-10 z-20 rounded-full bg-violet-600 w-20 h-20 cursor-pointer"
+            bottom-24 md:bottom-10 md:right-10 z-50 rounded-full bg-violet-600 w-20 h-20 cursor-pointer"
             onClick={scrollToTop}
         >
             <FaArrowUp size={30}/>

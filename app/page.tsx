@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Contact from "./sections/contact/Contact";
 import Footer from "./sections/footer/Footer";
 import Hero from "./sections/hero/Hero";
@@ -9,8 +9,15 @@ import Lenis from "@studio-freight/lenis";
 import ButtonToStart from "./components/ButtonToHome";
 import Journey from "./sections/journey/Journey";
 import Navbar from "./components/Navbar";
+import { useScroll } from "framer-motion";
 
 export default function Home() {
+  const container = useRef<any>();
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end end"],
+  });
+
   useEffect(() => {
     document.querySelectorAll('a[href^="#"]').forEach((el) => {
       el.addEventListener("click", (e) => {
@@ -34,10 +41,12 @@ export default function Home() {
   }, []);
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <main>
-        <Hero />
-        <Projects />
+        <div ref={container} className="relative">
+          <Hero progress={scrollYProgress}/>
+          <Projects progress={scrollYProgress}/>
+        </div>
         <Skills />
         <Journey />
         <Contact />
