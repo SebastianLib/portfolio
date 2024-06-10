@@ -7,7 +7,10 @@ import { z } from "zod";
 import { useRef, useState } from "react";
 import { toast } from "react-toastify";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
-import {motion} from "framer-motion"
+import { motion, useScroll } from "framer-motion";
+import { MdEmail, MdPhone } from "react-icons/md";
+import ContactSlider from "./components/ContactSlider";
+import { BsGithub } from "react-icons/bs";
 
 const schema = z.object({
   name: z.string(),
@@ -19,6 +22,11 @@ type FormFields = z.infer<typeof schema>;
 
 const Contact = () => {
   const [loading, setLoading] = useState<boolean>(false);
+  const container = useRef<any>();
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "end start"],
+  });
 
   const {
     register,
@@ -52,18 +60,51 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact">
+    <section id="contact" className="overflow-hidden">
       <div className="max-w-7xl mx-auto pt-20 px-4">
         <TextGenerateEffect
           words={"Contact With Me"}
           className="z-10 relative mb-20"
         />
+
         <motion.div
-        initial={{ opacity: 0, x: -200 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 0.5 }} 
-        viewport={{once:true}}
-        className="mt-10 mx-auto sm:max-w-4xl">
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          viewport={{ once: true }}
+          ref={container}
+          className=" mb-24 whitespace-nowrap flex flex-col justify-center gap-10"
+        >
+          <ContactSlider
+            progress={scrollYProgress}
+            icon={MdEmail}
+            text="sebastianlib2@gmail.com"
+            left="-35%"
+            direction="left"
+          />
+          <ContactSlider
+            progress={scrollYProgress}
+            icon={BsGithub}
+            text="SebastianLib"
+            left="-35%"
+            direction="right"
+          />
+          <ContactSlider
+            progress={scrollYProgress}
+            icon={MdPhone}
+            text="881 372 416"
+            left="-40%"
+            direction="left"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -200 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="mt-10 mx-auto sm:max-w-4xl"
+        >
           <BackgroundGradient className="sm:max-w-4xl bg-black rounded-3xl px-2 md:px-10 py-16">
             <h3 className="text-4xl font-bold text-center mb-10">
               Contact Form
@@ -106,7 +147,10 @@ const Contact = () => {
               </div>
 
               <div className="flex flex-col gap-3">
-                <label className="font-bold text-lg sm:text-xl" htmlFor="message">
+                <label
+                  className="font-bold text-lg sm:text-xl"
+                  htmlFor="message"
+                >
                   Message
                 </label>
                 <textarea
