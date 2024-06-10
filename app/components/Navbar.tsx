@@ -11,7 +11,7 @@ const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
 
   return (
-    <nav className="fixed z-30 top-0 md:top-4 w-full flex justify-center bg-black md:bg-transparent">
+    <nav className="fixed z-[9999] top-0 md:top-4 w-full flex justify-center bg-black md:bg-transparent">
       <motion.div
         initial={{ opacity: 0, scale: 0.5, y: -200 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
