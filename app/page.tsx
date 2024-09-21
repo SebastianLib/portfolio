@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="">
         <div ref={container} className="relative">
           <Hero progress={scrollYProgress}/>
           <Projects progress={scrollYProgress}/>
